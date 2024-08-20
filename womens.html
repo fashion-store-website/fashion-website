@@ -3,121 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<style>
-    .sec1{
+    <title>Womens Section - The Fashion Store</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #e0dbe1, #d9c1bb); 
+            line-height: 1.6;
+        }
+        .sec1 {
             width: 100%;
             height: 100px;
             background-color: rgb(224, 171, 24);
-            text-transform: capitalize;
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        body {
-    margin: 0;
-   
-    background: linear-gradient(to right, #e0dbe1, #d9c1bb); 
-    
-    line-height: 1.6;
-}
-</style>
-<body>
-    <header  class="sec1" style="display:flex;">
-        
-        <img src="./LOGOFS.png" style="margin-left: 600px;">
-        <h1><i>-THE FASTION STORE!-</i></h1>
-    </header>
-    <div style="text-align: center;">  <a href="mens.html">MENS SECTION</a><br>
-        <a href="kids.html">KIDS SECTION</a><br>
-        <a href=" ./index.html">HOME </a></div>
-   
-   
-    
-    <section >
-        <h4 style="text-align: center;background-color: rgb(11, 10, 9);font-size: x-large;"><mark>WELCOME TO WOMENS SECTION-</mark><br>
-            </h4>
-
-        <div style="text-align: center;background-color: rgb(207, 102, 111);">
-            <h4 style="text-decoration: underline;">--------------------------WHAT ARE YOU LOOKING FOR:-------------------------------</h4>
-            <nav style="font-size: x-large;">
-                <a href="#shirt">JEANS</a><br>
-                <a href="#watch">TOP</a><br>
-                <a href="#shoes">SHOES</a><br>
-            </nav>
-
-        </div>    
-        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="shirt"><bold><mark >JEANS SECTION:</mark></bold></h5>
-    <div class="sec4" style="display:flex ;gap: 370px;">
-       
-        <div style="border: 5px solid;">
-            
-            <img src="./jeans 1.png" style="height:300px; width: 100%;" >
-            <figcaption>BLACK JEANS <br>RS 550 <br>
-                <button onclick="addToCart('BLACK JEANS',550)">ADD_TO_CART</button><figcaption></img> 
-        </div>
-        <div style="border: 5px solid;">
-            <img src="./jeans2.png" style="height:300px;width: 100%"><figcaption>BLUE JEANS
-                <br>RS 900<br><button onclick="addToCart('BLUE JEANS',900)">ADD_TO_CART</button></figcaption></img> 
-        </div>
-        <div style="border: 5px solid;">
-            <img src="./jeans3.png" style="height:300px;width: 90%"> <figcaption>GREY JEANS
-                 <br>RS 560<br><button   onclick="addToCart('GREY JEANS ',56)"><bold>ADD_TO_CART</bold></button></figcaption></img> 
-        </div>
-        <div style="border: 5px solid;">
-            <img src="./jeans4.png" style="height:300px;width: 90%"> <figcaption>WHITE JEANS
-                 <br>RS 270<br><button   onclick="addToCart('WHITE JEANS',270)"><bold>ADD_TO_CART</bold></button></figcaption></img> 
-        </div>
-        
-
-
-        </div >
-        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="shoes"><MARK>SHOES SECTION:</MARK></h5>
-        <div style="display:flex ;gap: 370px;" >
-            <div style="border: 5px solid;" >
-            
-                <img src="./wshoes.png" style="height:300px; width: 100%;" >
-                <figcaption> WHITE SHOES <br>RS 550 <br>
-                    <button onclick="addToCart('WHITE SHOES',550)">ADD_TO_CART</button><figcaption></img> 
-            </div>
-            <div style="border: 5px solid;">
-                <img src="./shoes3.png" style="height:300px;width: 100%"><figcaption>BROWN SHOES
-                    <br>RS 880<br><button onclick="addToCart('BROWN SHOES',880)">ADD_TO_CART</button></figcaption></img> 
-            </div>
-            <div style="border: 5px solid;">
-                <img src="./shoes2.png" style="height:300px;width: 90%"> <figcaption>FANCY SHOES
-                     <br>RS 900<br><button onclick="addToCart('FANCY SHOES',900)">ADD_TO_CART</button></figcaption></img> 
-            </div>
-        </div>
-
-        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="glasses"><MARK>TOPS SECTION:</MARK></h5>
-        <div style="display:flex ;gap: 370px;" >
-            <div style="border: 5px solid;">
-            
-                <img src="./top2.png" style="height:300px; width: 100%;" >
-                <figcaption> TOP1<br>RS 550 <br>
-                    <button onclick="addToCart('TOP1',550)">ADD_TO_CART</button><figcaption></img> 
-            </div>
-            <div style="border: 5px solid;" >
-                <img src="./top3.png" style="height:300px;width: 100%"><figcaption>TOP2
-                    <br>RS 450<br><button onclick="addToCart('TOP2',450)">ADD_TO_CART</button></figcaption></img> 
-            </div>
-            <div style="border: 5px solid;" >
-                <img src="./top1.png" style="height:300px;width: 90%"> <figcaption>TOP3
-                     <br>RS 550<br><button onclick="addToCart('TOP3',550)">ADD_TO_CART</button></figcaption></img> 
-            </div>
-        </div>
-        <hr>
-        </section>
-        </div>
-        
-        <script>
-            function addToCart(productName, productPrice) {
-                const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                cart.push({ name: productName, price: productPrice });
-                localStorage.setItem('cart', JSON.stringify(cart));
-                alert(`${productName} has been added to your cart!`);
+        .sec1 img {
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 24px;
+            text-transform: capitalize;
+        }
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-links a {
+            display: block;
+            margin: 10px 0;
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+        }
+        h4 {
+            text-align: center;
+            background-color: rgb(11, 10, 9);
+            font-size: x-large;
+            padding: 10px;
+            color: #fff;
+        }
+        .section-content {
+            text-align: center;
+            background-color: rgb(207, 102, 111);
+            padding: 20px;
+        }
+        .section-content h4 {
+            text-decoration: underline;
+            margin-bottom: 20px;
+        }
+        nav a {
+            display: block;
+            margin: 10px 0;
+            color: #000;
+            text-decoration: none;
+            font-size: large;
+        }
+        .product-section {
+            background-color: rgb(11, 10, 9);
+            font-size: larger;
+            color: #fff;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .product {
+            border: 5px solid #000;
+            padding: 10px;
+            width: calc(33.33% - 40px);
+            box-sizing: border-box;
+        }
+        .product img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .product figcaption {
+            margin-top: 10px;
+        }
+        .product button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .product button:hover {
+            background-color: #555;
+        }
+        @media (max-width: 768px) {
+            .product {
+                width: calc(50% - 40px);
             }
-        </script>
-   
+        }
+        @media (max-width: 480px) {
+            .product {
+                width: 100%;
+            }
+            .sec1 img {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="sec1">
+        <img src="./LOGOFS.png" alt="The Fashion Store Logo">
+        <h1><i>-THE FASHION STORE!-</i></h1>
+    </header>
+    <div class="nav-links">
+        <a href="mens.html">MENS SECTION</a>
+        <a href="kids.html">KIDS SECTION</a>
+        <a href="./index.html">HOME</a>
+    </div>
+    <section>
+        <h4><mark>WELCOME TO WOMENS SECTION-</mark></h4>
+        <div class="section-content">
+            <h4>--------------------------WHAT ARE YOU LOOKING FOR:-------------------------------</h4>
+            <nav>
+                <a href="#jeans">JEANS</a>
+                <a href="#tops">TOPS</a>
+                <a href="#shoes">SHOES</a>
+            </nav>
+        </div>
+
+        <h5 class="product-section" id="jeans"><mark>JEANS SECTION:</mark></h5>
+        <div class="products">
+            <div class="product">
+                <img src="./jeans1.png" alt="Black Jeans">
+                <figcaption>BLACK JEANS <br>RS 550</figcaption>
+                <button onclick="addToCart('BLACK JEANS', 550)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./jeans2.png" alt="Blue Jeans">
+                <figcaption>BLUE JEANS <br>RS 900</figcaption>
+                <button onclick="addToCart('BLUE JEANS', 900)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./jeans3.png" alt="Grey Jeans">
+                <figcaption>GREY JEANS <br>RS 560</figcaption>
+                <button onclick="addToCart('GREY JEANS', 560)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./jeans4.png" alt="White Jeans">
+                <figcaption>WHITE JEANS <br>RS 270</figcaption>
+                <button onclick="addToCart('WHITE JEANS', 270)">ADD TO CART</button>
+            </div>
+        </div>
+
+        <h5 class="product-section" id="shoes"><mark>SHOES SECTION:</mark></h5>
+        <div class="products">
+            <div class="product">
+                <img src="./wshoes.png" alt="White Shoes">
+                <figcaption>WHITE SHOES <br>RS 550</figcaption>
+                <button onclick="addToCart('WHITE SHOES', 550)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./shoes3.png" alt="Brown Shoes">
+                <figcaption>BROWN SHOES <br>RS 880</figcaption>
+                <button onclick="addToCart('BROWN SHOES', 880)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./shoes2.png" alt="Fancy Shoes">
+                <figcaption>FANCY SHOES <br>RS 900</figcaption>
+                <button onclick="addToCart('FANCY SHOES', 900)">ADD TO CART</button>
+            </div>
+        </div>
+
+        <h5 class="product-section" id="tops"><mark>TOPS SECTION:</mark></h5>
+        <div class="products">
+            <div class="product">
+                <img src="./top2.png" alt="Top 1">
+                <figcaption>TOP 1 <br>RS 550</figcaption>
+                <button onclick="addToCart('TOP 1', 550)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./top3.png" alt="Top 2">
+                <figcaption>TOP 2 <br>RS 450</figcaption>
+                <button onclick="addToCart('TOP 2', 450)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./top1.png" alt="Top 3">
+                <figcaption>TOP 3 <br>RS 550</figcaption>
+                <button onclick="addToCart('TOP 3', 550)">ADD TO CART</button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        function addToCart(productName, productPrice) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} has been added to your cart!`);
+        }
+    </script>
 </body>
 </html>
