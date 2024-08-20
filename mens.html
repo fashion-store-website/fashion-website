@@ -3,109 +3,176 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Fashion Store - Men's Section</title>
     <style>
-        .sec1{
+        .sec1 {
             width: 100%;
             height: 100px;
             background-color: rgb(224, 171, 24);
             text-transform: capitalize;
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         body {
-    margin: 0;
-   
-    background: linear-gradient(to right, #e0dbe1, #d9c1bb); 
-    
-    line-height: 1.6;
-}
+            margin: 0;
+            background: linear-gradient(to right, #e0dbe1, #d9c1bb);
+            line-height: 1.6;
+            font-family: Arial, sans-serif;
+        }
+
+        .header img {
+            margin-right: 20px;
+        }
+
+        .nav-links {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: black;
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            background-color: rgb(11, 10, 9);
+            font-size: x-large;
+            color: white;
+            padding: 10px;
+        }
+
+        .product-section {
+            text-align: center;
+            background-color: rgb(136, 210, 167);
+            padding: 20px;
+        }
+
+        .product-section h4 {
+            text-decoration: underline;
+        }
+
+        .products {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .product {
+            border: 5px solid;
+            width: 300px;
+            margin: 20px;
+        }
+
+        .product img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .product figcaption {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product button {
+            padding: 10px 20px;
+            background-color: #f0c040;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
     </style>
 </head>
 <body>
-    <header  class="sec1" style="display:flex;">
-        
-        <img src="./LOGOFS.png" style="margin-left: 600px;">
-        <h1><i>-THE FASTION STORE!-</i></h1>
+    <header class="sec1">
+        <img src="./LOGOFS.png" alt="Fashion Store Logo">
+        <h1><i>-THE FASHION STORE!-</i></h1>
     </header>
-    <div style="text-align: center;">  <a href="womens.html">WOMENS SECTION</a><br>
-        <a href="kids.html">KIDS SECTION</a><br>
-        <a href=" ./index.html">HOME </a></div>
-   
-    <section >
-        <h4 style="text-align: center;background-color: rgb(11, 10, 9);font-size: x-large;"><mark>WELCOME TO MENS SECTION-</mark><br>
-            </h4>
 
-        <div style="text-align: center;background-color: rgb(136, 210, 167);">
-            <h4 style="text-decoration: underline;">--------------------------WHAT ARE YOU LOOKING FOR:-------------------------------</h4>
-            <nav style="font-size: x-large;">
+    <div class="nav-links">
+        <a href="womens.html">WOMEN'S SECTION</a><br>
+        <a href="kids.html">KIDS' SECTION</a><br>
+        <a href="./index.html">HOME</a>
+    </div>
+
+    <section>
+        <h4 class="section-title"><mark>WELCOME TO MEN'S SECTION</mark></h4>
+
+        <div class="product-section">
+            <h4>--------------------------WHAT ARE YOU LOOKING FOR:-------------------------------</h4>
+            <nav>
                 <a href="#shirt">Shirts</a><br>
                 <a href="#watch">Watch</a><br>
-                <a href="#glasses">glases</a><br>
+                <a href="#glasses">Glasses</a><br>
             </nav>
-
-        </div>    
-        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="shirt"><bold><mark >SHIRTS SECTION:</mark></bold></h5>
-    <div class="sec4" style="display:flex ;gap: 370px;">
-       
-        <div style="border: 5px solid;">
-            
-            <img src="./mensshirt.png" style="height:300px; width: 100%;" >
-            <figcaption>BROWN SHIRT <br>RS 550 <br>
-                <button onclick="addToCart('BROWN SHIRT',550)">ADD_TO_CART</button><figcaption></img> 
         </div>
-        <div style="border: 5px solid;">
-            <img src="./shirt2.png" style="height:300px;width: 100%"><figcaption>BLACK SHIRT
-                <br>RS 200<br><button onclick="addToCart('BLACK SHIRT',200)">ADD_TO_CART</button></figcaption></img> 
-        </div>
-        <div style="border: 5px solid;">
-            <img src="./shirt3.png" style="height:300px;width: 90%"> <figcaption>CHECKS SHIRT
-                 <br>RS 200<br><button   onclick="addToCart('CHECKS SHIRT',200)"><bold>ADD_TO_CART</bold></button></figcaption></img> 
-        </div>
-        
 
-
-        </div >
-        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="watch"><MARK>WATCH SECTION:</MARK></h5>
-        <div style="display:flex ;gap: 370px;" >
-            <div style="border: 5px solid;" >
-            
-                <img src="./watch.png" style="height:300px; width: 100%;" >
-                <figcaption> BLACK WATCH <br>RS 550 <br>
-                    <button onclick="addToCart('BLACK WATCH',550)">ADD_TO_CART</button><figcaption></img> 
+        <h5 class="section-title" id="shirt"><mark>SHIRTS SECTION:</mark></h5>
+        <div class="products">
+            <div class="product">
+                <img src="./mensshirt.png" alt="Brown Shirt">
+                <figcaption>BROWN SHIRT <br>RS 550</figcaption>
+                <button onclick="addToCart('BROWN SHIRT', 550)">ADD TO CART</button>
             </div>
-            <div style="border: 5px solid;">
-                <img src="./watch2.png" style="height:300px;width: 100%"><figcaption>BRAND WATCH
-                    <br>RS 600<br><button onclick="addToCart('BRAND WATCH',600)"><button onclick="addToCart('BRAND WATCH',600)">ADD_TO_CART</button></figcaption></img> 
-                    
-                     
+            <div class="product">
+                <img src="./shirt2.png" alt="Black Shirt">
+                <figcaption>BLACK SHIRT <br>RS 200</figcaption>
+                <button onclick="addToCart('BLACK SHIRT', 200)">ADD TO CART</button>
             </div>
-            <div style="border: 5px solid;">
-                <img src="./watch3.png" style="height:300px;width: 90%"> <figcaption>SMART WATCH
-                     <br>RS 900<br><button onclick="addToCart('SMART WATCH',900)">ADD_TO_CART</button></figcaption></img> 
+            <div class="product">
+                <img src="./shirt3.png" alt="Checks Shirt">
+                <figcaption>CHECKS SHIRT <br>RS 200</figcaption>
+                <button onclick="addToCart('CHECKS SHIRT', 200)">ADD TO CART</button>
             </div>
         </div>
 
-        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="glasses"><MARK>SUNGLASSES SECTION:</MARK></h5>
-        <div style="display:flex ;gap: 370px;" >
-            <div style="border: 5px solid;">
-            
-                <img src="./glass.png" style="height:300px; width: 100%;" >
-                <figcaption> SUN GLASSES<br>RS 250 <br>
-                    <button onclick="addToCart('SUN GLASSES',250)">ADD_TO_CART</button><figcaption></img> 
+        <h5 class="section-title" id="watch"><mark>WATCH SECTION:</mark></h5>
+        <div class="products">
+            <div class="product">
+                <img src="./watch.png" alt="Black Watch">
+                <figcaption>BLACK WATCH <br>RS 550</figcaption>
+                <button onclick="addToCart('BLACK WATCH', 550)">ADD TO CART</button>
             </div>
-            <div style="border: 5px solid;" >
-                <img src="./glasses2.png" style="height:300px;width: 100%"><figcaption>GLASSES2
-                    <br>RS 450<br><button onclick="addToCart('GLASSES2',450)">ADD_TO_CART</button></figcaption></img> 
+            <div class="product">
+                <img src="./watch2.png" alt="Brand Watch">
+                <figcaption>BRAND WATCH <br>RS 600</figcaption>
+                <button onclick="addToCart('BRAND WATCH', 600)">ADD TO CART</button>
             </div>
-            <div style="border: 5px solid;" >
-                <img src="./glasse3.png" style="height:300px;width: 90%"> <figcaption>BLUE GLASSES
-                     <br>RS 350<br><button onclick="addToCart('BLUE GLASSES',350)">ADD_TO_CART</button></figcaption></img> 
+            <div class="product">
+                <img src="./watch3.png" alt="Smart Watch">
+                <figcaption>SMART WATCH <br>RS 900</figcaption>
+                <button onclick="addToCart('SMART WATCH', 900)">ADD TO CART</button>
+            </div>
+        </div>
+
+        <h5 class="section-title" id="glasses"><mark>SUNGLASSES SECTION:</mark></h5>
+        <div class="products">
+            <div class="product">
+                <img src="./glass.png" alt="Sun Glasses">
+                <figcaption>SUN GLASSES <br>RS 250</figcaption>
+                <button onclick="addToCart('SUN GLASSES', 250)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./glasses2.png" alt="Glasses 2">
+                <figcaption>GLASSES 2 <br>RS 450</figcaption>
+                <button onclick="addToCart('GLASSES 2', 450)">ADD TO CART</button>
+            </div>
+            <div class="product">
+                <img src="./glasse3.png" alt="Blue Glasses">
+                <figcaption>BLUE GLASSES <br>RS 350</figcaption>
+                <button onclick="addToCart('BLUE GLASSES', 350)">ADD TO CART</button>
             </div>
         </div>
         <hr>
-        </section>
-    </div>
-        
+    </section>
+
     <script>
         function addToCart(productName, productPrice) {
             const cart = JSON.parse(localStorage.getItem('cart')) || [];
@@ -117,3 +184,6 @@
 
 </body>
 </html>
+
+        
+  
