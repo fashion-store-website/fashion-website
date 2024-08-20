@@ -3,132 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>The Fashion Store</title>
     <style>
         html {
             scroll-behavior: smooth;
         }
-        .sec1{
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('./bg.png');
+            background-size: cover;
+            background-position: center;
+            line-height: 1.6;
+        }
+        .sec1 {
             width: 100%;
             height: 100px;
             background-color: rgb(108, 180, 93);
-            text-transform: capitalize;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            text-transform: capitalize;
         }
-        .sec2{
+        .sec1 img {
+            margin-right: 20px;
+        }
+        .main-banner {
+            background-color: rgb(212, 154, 67);
+            text-align: center;
+            text-decoration: underline;
+            text-decoration-color: rgb(180, 166, 14);
+            padding: 10px;
+            margin-bottom: 30px;
+        }
+        .sec2 {
             background-color: #74d561;
             display: flex;
-            width: 100%;
-            height:300px;
+            justify-content: space-around;
             align-items: center;
-            
+            padding: 20px;
         }
-        body {
-    margin: 0;
-   background-image:url('./bg.png');
-  
-   
-}
-        
-        
+        .section-box {
+            border: 2px dotted;
+            height: 250px;
+            width: 30%;
+            text-align: center;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .section-box img {
+            width: 80%;
+            height: 220px;
+            object-fit: cover;
+        }
+        .cart-section {
+            height: 440px;
+            border: 3px dotted;
+            text-align: center;
+            margin: 30px auto;
+            background-color: rgb(158, 208, 226);
+            width: 40%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 
 <body>
-    <header  class="sec1" style="display:flex;">
-        
-        <img src="./LOGOFS.png" style="margin-left: 600px;">
-        <h1><i>-THE FASTION STORE!-</i></h1>
-        
+    <header class="sec1">
+        <img src="./LOGOFS.png" alt="Fashion Store Logo">
+        <h1><i>-THE FASHION STORE!-</i></h1>
     </header>
     
     <main>
-      <div style="background-color:  rgb(212, 154, 67);; 
-      text-align:center;
-      text-decoration:underline;
-      text-decoration-color: rgb(180, 166, 14);
-      height:50px;margin-bottom:30px">
-        <h2><i>~~~~FIND LATEST AND TRENDIEST FASTION 
-            AT ONE PLACE AT  FASHION STORE WEBSITE~~~~</i></h2>
-            
+        <div class="main-banner">
+            <h2><i>~~~~FIND LATEST AND TRENDIEST FASHION AT ONE PLACE AT FASHION STORE WEBSITE~~~~</i></h2>
         </div>
-        <div style="background-color: rgb(212, 154, 67);">
+        <div style="background-color: rgb(212, 154, 67); padding: 20px;">
             <h3>Welcome to <mark>FASHION STORE</mark>, your ultimate destination for fashion-forward 
                 clothing that blends style, comfort, and affordability. 
                 Whether you're looking to revamp your wardrobe with the latest trends or seeking timeless classics, we have something for everyone. 
-                From chic dresses and sharp suits to casual tees and comfy loungewear, our curated collections are designed to make you feel confident and look your best, no matter the occasion. Explore our wide range of sizes, colors, and designs, and let us help you express your unique style with ease. Shop now and experience the joy of fashion, delivered right to your doorstep!</h3>
+                From chic dresses and sharp suits to casual tees and comfy loungewear, our curated collections are designed to make you feel confident and look your best, no matter the occasion. Explore our wide range of sizes, colors, and designs, and let us help you express your unique style with ease. Shop now and experience the joy of fashion, delivered right to your doorstep!
+            </h3>
         </div>
+        
         <div class="sec2">
-            <h3><bold>WHAT WOULD YOU LIKE TO SHOP:)</bold></h3>
-            <div style="border: 2px dotted;
-            height:250px;width: 40%;">
-            
-            <a href="mens.html"  style="color: rgb(139, 6, 6);" target="_self">MEN SECTION</a>
-            <img src="./mensf.png " style="width: 80%; height: 220px;
-            margin-top: 5px;margin-left: 50px;"><img>
+            <div class="section-box">
+                <a href="mens.html" style="color: rgb(139, 6, 6);" target="_self">MEN SECTION</a>
+                <img src="./mensf.png" alt="Men's Fashion">
             </div>
-            
-            <div style="margin-left: 10px;border: 2px dotted;
-            height:250px;width: 40%;">
-            <a href="womens.html" style="color: rgb(114, 4, 4);"target="_self">WOMEN SECTION</a>
-            <img src="./women fas.png " style="width: 80%; height: 220px; 
-            margin-top: 5px;margin-left: 50px;"><img>
+            <div class="section-box">
+                <a href="womens.html" style="color: rgb(114, 4, 4);" target="_self">WOMEN SECTION</a>
+                <img src="./women fas.png" alt="Women's Fashion">
             </div>
-            <div style="margin-left: 10px;border: 2px dotted;
-            height:250px;width: 40%;">
-            <a href="kids.html" style="color: brown;"target="_self">CHILDREN SECTION </a>
-            <img src="./kidddddddddddddddddddddd-08-18 15-47-05.png" style="width: 80%; height: 220px; margin-top: 5px;margin-left: 50px;"><img>
-        </div>
+            <div class="section-box">
+                <a href="kids.html" style="color: brown;" target="_self">CHILDREN SECTION</a>
+                <img src="./kidddddddddddddddddddddd-08-18 15-47-05.png" alt="Children's Fashion">
+            </div>
         </div>
         
-           <hr>
-
-                  
-                    <div style="height: 440px;border: 3px dotted;text-align: center;margin-left: 
-                    600px;background-color: rgb(158, 208, 226);width: 40%;">
-                <section class="cart" id="cart">
-                    <h2><mark>Your Shopping Cart</mark></h2>
-                    <div id="cart-items">
-                        <p>Your cart is empty.</p>
-                    </div>
-                    <p><strong>TOTAL RS:</strong> <span id="cart-total">0</span></p>
-                </section></div>
+        <hr>
+        
+        <div class="cart-section">
+            <section class="cart" id="cart">
+                <h2><mark>Your Shopping Cart</mark></h2>
+                <div id="cart-items">
+                    <p>Your cart is empty.</p>
+                </div>
+                <p><strong>TOTAL RS:</strong> <span id="cart-total">0</span></p>
+            </section>
+        </div>
                 
-                <script>
-                    window.onload = function() {
-                        updateCart();
-                        //localStorage.removeItem('cart'); 
-                       
-                    };
-        
-                    function updateCart() {
-                        const cart = JSON.parse(localStorage.getItem('cart')) || [];
-                        const cartItems = document.getElementById('cart-items');
-                        const cartTotal = document.getElementById('cart-total');
-        
-                        cartItems.innerHTML = '';
-                        let total = 0;
-        
-                        cart.forEach(item => {
-                            const itemElement = document.createElement('p');
-                            itemElement.textContent = `${item.name} - RS${item.price}`;
-                            cartItems.appendChild(itemElement);
-                            total += item.price;
-                        });
-        
-                        if (cart.length === 0) {
-                            cartItems.innerHTML = '<p>Your cart is empty.</p>';
-                        }
-        
-                        cartTotal.textContent = total;
-                    }
-                </script>
+        <script>
+            window.onload = function() {
+                updateCart();
+            };
 
-            
+            function updateCart() {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                const cartItems = document.getElementById('cart-items');
+                const cartTotal = document.getElementById('cart-total');
 
+                cartItems.innerHTML = '';
+                let total = 0;
 
+                cart.forEach(item => {
+                    const itemElement = document.createElement('p');
+                    itemElement.textContent = `${item.name} - RS${item.price}`;
+                    cartItems.appendChild(itemElement);
+                    total += item.price;
+                });
 
-            
+                if (cart.length === 0) {
+                    cartItems.innerHTML = '<p>Your cart is empty.</p>';
+                }
+
+                cartTotal.textContent = total;
+            }
+        </script>
     </main>
 </body>
 </html>
