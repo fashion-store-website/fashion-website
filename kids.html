@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .sec1{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(224, 171, 24);
+            text-transform: capitalize;
+            text-align: center;
+        }
+     body {
+    margin: 0;
+   
+    background: linear-gradient(to right, #e0dbe1, #d9c1bb); 
+    
+    line-height: 1.6;
+}
+</style>
+<body>
+    <header  class="sec1" style="display:flex;">
+        
+        <img src="./LOGOFS.png" style="margin-left: 600px;">
+        <h1><i>-THE FASTION STORE!-</i></h1>
+        
+    </header>
+    <div style="text-align: center;">  <a href="womens.html">WOMENS SECTION</a><br>
+        <a href="mens.html">MENS SECTION</a><br>
+        <a href="./index.html">HOME </a></div>
+   
+    <section >
+        <h4 style="font-size: x-large;background-color: black; text-align: center;"><mark>WELCOME TO KID'S SECTION-</mark><br>
+            </h4>
+
+        <div style="text-align: center;background-color: rgb(236, 220, 77);">
+            <h4 style="text-decoration: underline;">--------------------------WHAT ARE YOU LOOKING FOR:-------------------------------</h4>
+            <nav style="font-size: x-large;">
+                <a href="#watch">FROKS</a><br>
+                <a href="#glasses">SHOES</a><br>
+                <a href="#shirt">SWEATERS</a><br>
+            </nav>
+
+        </div>    
+        <h5 style="font-size: larger;background-color: rgb(31, 32, 30);" id="shirt"><bold><mark >SWEATERS SECTION:</mark></bold></h5>
+    <div class="sec4" style="display:flex ;gap: 370px;">
+       
+        <div style="border: 5px solid;">
+            
+            <img src="./sweater1.png" style="height:300px; width: 100%;" >
+            <figcaption>RED SWEATER <br>RS 550 <br>
+                <button onclick="addToCart('RED SWEATER ',550)">ADD_TO_CART</button><figcaption></img> 
+        </div>
+        <div style="border: 5px solid;">
+            <img src="./sweater4.png" style="height:300px;width: 100%"><figcaption>BLUE SWEATER 
+                <br>RS 200<br><button onclick="addToCart('BLUE SWEATER ',200)">ADD_TO_CART</button></figcaption></img> 
+        </div>
+        <div style="border: 5px solid;">
+            <img src="./sweater5.png" style="height:300px;width: 90%"> <figcaption>WHITE SWEATER 
+                 <br>RS 900<br><button   onclick="addToCart('WHITE',900)"><bold>ADD_TO_CART</bold></button></figcaption></img> 
+        </div><div style="border: 5px solid;">
+            <img src="./swetaer2.png" style="height:300px;width: 90%"> <figcaption>YELLOW SWEATER 
+                 <br>RS 880<br><button   onclick="addToCart('YELLOW SWEATER ',880)"><bold>ADD_TO_CART</bold></button></figcaption></img> 
+        </div>
+        
+
+
+        </div >
+        <h5 style="font-size: larger;background-color: rgb(31, 32, 30);" id="watch"><MARK>FROK SECTION:</MARK></h5>
+        <div style="display:flex ;gap: 370px;" >
+            <div style="border: 5px solid;" >
+            
+                <img src="./frok.png" style="height:300px; width: 100%;" >
+                <figcaption> BLACK WATCH <br>RS 250 <br>
+                    <button onclick="addToCart('BLACK WATCH',550)">ADD_TO_CART</button><figcaption></img> 
+            </div>
+            <div style="border: 5px solid;">
+                <img src="./frok2.png" style="height:300px;width: 100%"><figcaption>ORANGE FROK
+                    <br>RS 600<br><button onclick="addToCart('ORANGE FROK',600)">ADD_TO_CART</button></figcaption></img> 
+            </div>
+            <div style="border: 5px solid;">
+                <img src="./frok3.png" style="height:300px;width: 90%"> <figcaption>WHITE AND PINK FROK
+                     <br>RS 900<br><button onclick="addToCart('WHITE AND PINK FROK',900)">ADD_TO_CART</button></figcaption></img> 
+            </div>
+            <div style="border: 5px solid;">
+                <img src="./frok4.png" style="height:300px;width: 90%"> <figcaption>DESIGNER FROK
+                     <br>RS 900<br><button onclick="addToCart('DESIGNER FROK',900)">ADD_TO_CART</button></figcaption></img> 
+            </div>
+        </div>
+
+        <h5 style="font-size: larger;background-color: rgb(31, 32, 30);" id="glasses"><MARK>SHOES SECTION:</MARK></h5>
+        <div style="display:flex ;gap: 370px;" >
+            <div style="border: 5px solid;">
+            
+                <img src="./kids1.png" style="height:300px; width: 100%;" >
+                <figcaption> WHITE SHOES<br>RS 550 <br>
+                    <button onclick="addToCart('WHITE SHOES',550)">ADD_TO_CART</button><figcaption></img> 
+            </div>
+            <div style="border: 5px solid;" >
+                <img src="./kids2.png" style="height:300px;width: 100%"><figcaption>BLUE SHOES
+                    <br>RS 450<br><button onclick="addToCart('BLUE SHOES',450)">ADD_TO_CART</button></figcaption></img> 
+            </div>
+            <div style="border: 5px solid;" >
+                <img src="./kids4.png" style="height:300px;width: 90%"> <figcaption>RED GLASSES
+                     <br>RS 200<br><button onclick="addToCart('RED GLASSES',200)">ADD_TO_CART</button></figcaption></img> 
+            </div>
+        </div>
+        <hr>
+        </section>
+        </div>
+        
+        <script>
+            function addToCart(productName, productPrice) {
+                const cart = JSON.parse(localStorage.getItem('cart')) || [];
+                cart.push({ name: productName, price: productPrice });
+                localStorage.setItem('cart', JSON.stringify(cart));
+                alert(`${productName} has been added to your cart!`);
+            }
+        </script>
+   
+</body>
+</html>

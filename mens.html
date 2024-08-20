@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sec1{
+            width: 100%;
+            height: 100px;
+            background-color: rgb(224, 171, 24);
+            text-transform: capitalize;
+            text-align: center;
+        }
+        body {
+    margin: 0;
+   
+    background: linear-gradient(to right, #e0dbe1, #d9c1bb); 
+    
+    line-height: 1.6;
+}
+    </style>
+</head>
+<body>
+    <header  class="sec1" style="display:flex;">
+        
+        <img src="./LOGOFS.png" style="margin-left: 600px;">
+        <h1><i>-THE FASTION STORE!-</i></h1>
+    </header>
+    <div style="text-align: center;">  <a href="womens.html">WOMENS SECTION</a><br>
+        <a href="kids.html">KIDS SECTION</a><br>
+        <a href=" ./index.html">HOME </a></div>
+   
+    <section >
+        <h4 style="text-align: center;background-color: rgb(11, 10, 9);font-size: x-large;"><mark>WELCOME TO MENS SECTION-</mark><br>
+            </h4>
+
+        <div style="text-align: center;background-color: rgb(136, 210, 167);">
+            <h4 style="text-decoration: underline;">--------------------------WHAT ARE YOU LOOKING FOR:-------------------------------</h4>
+            <nav style="font-size: x-large;">
+                <a href="#shirt">Shirts</a><br>
+                <a href="#watch">Watch</a><br>
+                <a href="#glasses">glases</a><br>
+            </nav>
+
+        </div>    
+        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="shirt"><bold><mark >SHIRTS SECTION:</mark></bold></h5>
+    <div class="sec4" style="display:flex ;gap: 370px;">
+       
+        <div style="border: 5px solid;">
+            
+            <img src="./mensshirt.png" style="height:300px; width: 100%;" >
+            <figcaption>BROWN SHIRT <br>RS 550 <br>
+                <button onclick="addToCart('BROWN SHIRT',550)">ADD_TO_CART</button><figcaption></img> 
+        </div>
+        <div style="border: 5px solid;">
+            <img src="./shirt2.png" style="height:300px;width: 100%"><figcaption>BLACK SHIRT
+                <br>RS 200<br><button onclick="addToCart('BLACK SHIRT',200)">ADD_TO_CART</button></figcaption></img> 
+        </div>
+        <div style="border: 5px solid;">
+            <img src="./shirt3.png" style="height:300px;width: 90%"> <figcaption>CHECKS SHIRT
+                 <br>RS 200<br><button   onclick="addToCart('CHECKS SHIRT',200)"><bold>ADD_TO_CART</bold></button></figcaption></img> 
+        </div>
+        
+
+
+        </div >
+        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="watch"><MARK>WATCH SECTION:</MARK></h5>
+        <div style="display:flex ;gap: 370px;" >
+            <div style="border: 5px solid;" >
+            
+                <img src="./watch.png" style="height:300px; width: 100%;" >
+                <figcaption> BLACK WATCH <br>RS 550 <br>
+                    <button onclick="addToCart('BLACK WATCH',550)">ADD_TO_CART</button><figcaption></img> 
+            </div>
+            <div style="border: 5px solid;">
+                <img src="./watch2.png" style="height:300px;width: 100%"><figcaption>BRAND WATCH
+                    <br>RS 600<br><button onclick="addToCart('BRAND WATCH',600)"><button onclick="addToCart('BRAND WATCH',600)">ADD_TO_CART</button></figcaption></img> 
+                    
+                     
+            </div>
+            <div style="border: 5px solid;">
+                <img src="./watch3.png" style="height:300px;width: 90%"> <figcaption>SMART WATCH
+                     <br>RS 900<br><button onclick="addToCart('SMART WATCH',900)">ADD_TO_CART</button></figcaption></img> 
+            </div>
+        </div>
+
+        <h5 style="background-color: rgb(11, 10, 9);font-size: larger;" id="glasses"><MARK>SUNGLASSES SECTION:</MARK></h5>
+        <div style="display:flex ;gap: 370px;" >
+            <div style="border: 5px solid;">
+            
+                <img src="./glass.png" style="height:300px; width: 100%;" >
+                <figcaption> SUN GLASSES<br>RS 250 <br>
+                    <button onclick="addToCart('SUN GLASSES',250)">ADD_TO_CART</button><figcaption></img> 
+            </div>
+            <div style="border: 5px solid;" >
+                <img src="./glasses2.png" style="height:300px;width: 100%"><figcaption>GLASSES2
+                    <br>RS 450<br><button onclick="addToCart('GLASSES2',450)">ADD_TO_CART</button></figcaption></img> 
+            </div>
+            <div style="border: 5px solid;" >
+                <img src="./glasse3.png" style="height:300px;width: 90%"> <figcaption>BLUE GLASSES
+                     <br>RS 350<br><button onclick="addToCart('BLUE GLASSES',350)">ADD_TO_CART</button></figcaption></img> 
+            </div>
+        </div>
+        <hr>
+        </section>
+    </div>
+        
+    <script>
+        function addToCart(productName, productPrice) {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart.push({ name: productName, price: productPrice });
+            localStorage.setItem('cart', JSON.stringify(cart));
+            alert(`${productName} has been added to your cart!`);
+        }
+    </script>
+
+</body>
+</html>
